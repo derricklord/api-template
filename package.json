@@ -1,0 +1,31 @@
+{
+  "name": "api-template",
+  "version": "1.0.0",
+  "description": "\"API template with Hapi.js\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/dev",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && mkdir dist && babel src -s -d dist",
+    "production": "npm run build && pm2 start bin/prod -i max",
+    "stop": "pm2 stop all",
+    "restart": "pm2 restart all",
+    "list": "pm2 list",
+    "logs": "pm2 logs",
+    "monitor": "pm2 monit"
+  },
+  "author": "Derrick A Lord",
+  "license": "MIT",
+  "dependencies": {
+    "hapi": "^16.1.0",
+    "pm2": "^2.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "dotenv": "^4.0.0"
+  }
+}
