@@ -18,3 +18,4 @@ export function staffPost(request, reply){
 	this.data.push(request.payload)
 	reply(this.data)
 }
+

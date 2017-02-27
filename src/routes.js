@@ -21,6 +21,16 @@ const routes = [{
 	handler: Handlers.staff
 },
 {
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+        directory: {
+        	path:'public',
+            listing: true
+        }
+    }
+},
+{
 	method: 'POST',
 	path: '/staff',
 	handler: Handlers.staffPost
