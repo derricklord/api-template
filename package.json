@@ -20,7 +20,8 @@
   "dependencies": {
     "hapi": "^16.1.0",
     "inert": "^4.1.0",
-    "pm2": "^2.4.0"
+    "pm2": "^2.4.0",
+    "socket.io": "^1.7.3"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
